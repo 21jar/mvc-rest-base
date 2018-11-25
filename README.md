@@ -1,2 +1,2 @@
 # mvc_rest_base
-idea创建项目
+mvc的前后分离基础工程
