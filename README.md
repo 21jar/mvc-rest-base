@@ -1,2 +1,2 @@
 # mvc_rest_base
-mvc的前后分离基础工程
+mvc的前后分离基础工程。
