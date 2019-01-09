@@ -18,6 +18,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <spring.version>4.3.18.RELEASE</spring.version>
+    <mysql.version>5.1.44</mysql.version>
     <swagger2.version>2.6.0</swagger2.version>
     <jackson.version>2.9.5</jackson.version>
     <fastjson.version>1.2.31</fastjson.version>
@@ -26,6 +27,9 @@
     <slf4j.version>1.7.19</slf4j.version>
     <baomidou.version>2.3.1</baomidou.version>
     <druid.version>1.0.18</druid.version>
+    <aspectjweaver.version>1.8.8</aspectjweaver.version>
+    <redis.version>2.9.0</redis.version>
+    <pagehelper.version>4.2.1</pagehelper.version>
   </properties>
 
   <dependencies>
@@ -206,6 +210,39 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-tx</artifactId>
       <version>${spring.version}</version>
+    </dependency>
+
+    <!-- Mysql -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>${mysql.version}</version>
+    </dependency>
+
+    <!-- AOP -->
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectjweaver.version}</version>
+    </dependency>
+
+    <!--redis-->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>1.7.2.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${redis.version}</version>
+    </dependency>
+
+    <!-- mapper分页包 -->
+    <dependency>
+      <groupId>com.github.pagehelper</groupId>
+      <artifactId>pagehelper</artifactId>
+      <version>4.1.6</version>
     </dependency>
 
   </dependencies>
