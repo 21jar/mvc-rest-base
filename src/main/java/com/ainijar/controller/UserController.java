@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
-@Api(description = "测试接口文档")
-@RequestMapping("/hello")
-public class HelloWorld {
+@Api(description = "用户测试接口文档")
+@RequestMapping("/user")
+public class UserController {
 
     @GetMapping("/say1/{word}")
     @ApiOperation(value = "测试接口", notes = "测试接口")
@@ -25,5 +25,4 @@ public class HelloWorld {
     public Result say2(@RequestParam(defaultValue = "", required = false) String word) {
         return Result.success(word, "成功");
     }
-
 }

@@ -1,7 +1,7 @@
 package com.ainijar;
 
 import com.ainijar.common.config.Result;
-import com.ainijar.controller.HelloWorld;
+import com.ainijar.controller.UserController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +19,11 @@ import org.springframework.test.context.web.WebAppConfiguration;
 public class BaseTest {
 
     @Autowired
-    HelloWorld helloWorld;
+    UserController userController;
 
     @Test
     public void test1() throws Exception {
-        Result result = helloWorld.say1("hello");
+        Result result = userController.say1("hello");
         System.out.println(result);
     }
 

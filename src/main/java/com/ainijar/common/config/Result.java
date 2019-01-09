@@ -7,6 +7,7 @@ import lombok.Data;
  * @date 2018/10/19
  */
 @Data
+@SuppressWarnings("unchecked")
 public class Result<T> {
 
     private static final int SUCCESS = 1;
