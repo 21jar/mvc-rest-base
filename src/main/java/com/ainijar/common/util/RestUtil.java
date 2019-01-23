@@ -52,7 +52,7 @@ public class RestUtil {
         T object = restTemplate.postForObject(url, httpEntity, type);
         return object;
     }
-    public  <T> ResponseEntity<T> restByBodyByParamEntity(MultiValueMap params, String url, Class<T> type) {
+    public  <T> ResponseEntity<T> restPostByParamEntity(MultiValueMap params, String url, Class<T> type) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         HttpEntity<MultiValueMap<String, Object>> httpEntity = new HttpEntity<>(params, headers);
