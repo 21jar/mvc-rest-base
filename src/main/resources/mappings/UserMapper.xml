@@ -2,4 +2,60 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ainijar.dao.UserMapper">
 
+    <sql id="Base_Column_List">
+		u.ID AS id,
+		u.TYPE AS type,
+		u.TITLE AS title,
+		u.SEQ AS seq,
+		u.STATUS AS status,
+		u.CONTENT AS content,
+		u.PUBLISH_ORG AS publishOrg,
+		u.ORGIN AS orgin,
+		u.ORGIN_NAME AS orginName,
+		u.CREATED_USER_ID AS createdUserId,
+		u.CREATED_TIME AS createdTime,
+		u.UPDATED_USER_ID AS updatedUserId,
+		u.UPDATED_TIME AS updatedTime,
+		u.DELETE_TYPE  AS deleteType
+	</sql>
+
+    <sql id="BASE_JOINS">
+    </sql>
+
+    <select id="get" resultType="java.util.Map" >
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM user u
+        <include refid="BASE_JOINS"/>
+        WHERE u.id = #{id}
+    </select>
+
+    <select id="findList" resultType="java.util.Map" >
+        SELECT
+        <include refid="Base_Column_List"/>
+        FROM user u
+        <include refid="BASE_JOINS"/>
+        <if test="ew != null and ew.sqlSegment != null">
+            ${ew.sqlSegment}
+        </if>
+    </select>
+
+    <!--物理删除-->
+    <update id="delete">
+		DELETE FROM user
+		WHERE id = #{id}
+	</update>
+
+    <!--逻辑删除-->
+    <update id="deleteByLogic">
+		UPDATE user SET
+			del_flag = #{DEL_FLAG_DELETE}
+		WHERE id = #{id}
+	</update>
+
+    <!-- 根据实体名称和字段名称和字段值获取唯一记录 -->
+    <select id="findUniqueByProperty" resultType="java.util.Map" statementType="STATEMENT">
+		select * FROM user  where ${propertyName} = '${value}'
+	</select>
+
 </mapper>
