@@ -1,0 +1,44 @@
+#app {
+  font-family: PingFang SC; }
+  #app .title {
+    width: 100%;
+    height: 220px;
+    background: #fff url(../image/logo.jpg) 0 0 no-repeat; }
+  #app .main ul .item {
+    padding: 32px;
+    border-bottom: 1px solid #E5E5E5; }
+    #app .main ul .item:nth-last-of-type {
+      border-bottom: none; }
+    #app .main ul .item .top-text {
+      font-size: 32px;
+      color: #333333;
+      font-weight: bold; }
+    #app .main ul .item .sub {
+      display: flex;
+      justify-content: space-between;
+      margin: 8px 0;
+      font-size: 28px;
+      color: #666666; }
+      #app .main ul .item .sub .date {
+        font-size: 24px;
+        color: #999999; }
+    #app .main ul .item .center {
+      padding: 20px;
+      background: #F5F5F5; }
+      #app .main ul .item .center p {
+        font-size: 26px;
+        color: #666666;
+        margin-bottom: 8px; }
+        #app .main ul .item .center p:nth-last-of-type {
+          margin-bottom: 0; }
+  #app .bottom {
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: #999999;
+    background: #E8E8E8; }
+
+/*# sourceMappingURL=list.css.map */

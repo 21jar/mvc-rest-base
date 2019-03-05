@@ -247,6 +247,14 @@
       <version>${redis.version}</version>
     </dependency>
 
+    <!--jsp所需-->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+      <version>1.2</version>
+      <type>jar</type>
+    </dependency>
+
   </dependencies>
 
   <build>
